@@ -275,3 +275,19 @@ nav ul li a {
 footer {
   display: none; /* Removed footer */
 }
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #ff9a9e, #e74c3c 50%, #ff9a9e); /* Gradient from pink to dark pink in the middle */
+  color: #f0f0f0; /* Light text color for contrast */
+}
+
+header {
+  background: linear-gradient(to right, #ff9a9e, #e74c3c, #ff9a9e); /* Horizontal gradient in header */
+  color: #ffffff; /* White text */
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
