@@ -1,7 +1,136 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DanMah</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="https://media.discordapp.net/attachments/1294951848519925831/1303606188201742336/LOGO_C7733bd3.png?ex=672c5d5f&is=672b0bdf&hm=6b09c9c2d7d9fe980b2216c6cc2ebb9032f9fc510b09a46434977f3c116338e2&=&format=webp&quality=lossless&width=350&height=350" type="image/x-icon" />
+</head>
+<body class="page-loaded">
+  <header>
+    <h1>DanMah</h1>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showHome(event)">Home</a></li>
+        <li><a href="#about" onclick="showAbout(event)">About</a></li>
+        <li><a href="#contact" onclick="showContact(event)">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section id="articles">
+      <h2>Latest Articles</h2>
+      <div class="article" id="article1" onclick="openArticle(1)">
+        <h2>RELEASE OF OUR FIRST PRODUCT</h2>
+        <video width="100%" height="250" controls>
+          <source src="video/releaseFirstProd.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="description">
+          Our first product is officially released! Watch the video and click on me for details.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <main id="about" style="display: none;">
+    <section id="about" class="full-screen">
+      <h2>About Us</h2>
+      <p>DanMah is a company focused on creating innovative products. We are a team of dedicated professionals passionate about programming and design.</p>
+      <h2>Our Team</h2>
+      <ul>
+        <li>Dani2009Flo - CEO</li>
+        <li>MasterInqsss - Developer</li>
+      </ul>
+    </section>
+  </main>
+
+  <main id="contact" style="display: none;">
+    <section id="contact" class="full-screen">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:contactdanmah@gmail.com">contactdanmah@gmail.com</a></p>
+      <p>Discord: <a href="https://discord.gg/4SHcSKUzA8">Join our Discord</a></p>
+    </section>
+  </main>
+
+  <!-- Modal for article -->
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal()">×</button>
+      <h2 id="modalTitle"></h2>
+      <video id="modalVideo" width="100%" height="400" controls>
+        <source id="modalVideoSource" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p id="modalDescription"></p>
+      <p id="modalPrice" style="font-size: 24px; font-weight: 600; color: #f39c12; margin-top: 20px;"></p>
+    </div>
+  </div>
+
+  <script>
+    // Navigation toggle with event.preventDefault() to avoid scrolling
+    function showHome(event) {
+      event.preventDefault();
+      document.getElementById('home').style.display = 'block';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+    }
+
+    function showAbout(event) {
+      event.preventDefault();
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about').style.display = 'block';
+      document.getElementById('contact').style.display = 'none';
+    }
+
+    function showContact(event) {
+      event.preventDefault();
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('contact').style.display = 'block';
+    }
+
+    // Modal functionality
+    function openArticle(articleId) {
+      const modal = document.getElementById('articleModal');
+      const modalVideo = document.getElementById('modalVideo');
+      const modalVideoSource = document.getElementById('modalVideoSource');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalPrice = document.getElementById('modalPrice');
+      
+      // Set content based on article ID
+      if (articleId === 1) {
+        modalVideoSource.src = 'video/releaseFirstProd.mp4';
+        modalTitle.innerText = 'RELEASE OF OUR FIRST PRODUCT';
+        modalDescription.innerHTML = `
+          <p>Our first product is a simple loading system with a few cutscenes. After a few seconds, a black frame tweens in and after a couple of seconds, it tweens off.</p>
+          <p>Then, your camera is automatically connected to the player (everything returns to normal). You can move the parts (the cutscene) wherever you want, and if you need help, you can open a ticket anytime in our main Discord server.</p>
+         <p>You can buy this product by joining our main discord server.</p>
+          `;
+        modalPrice.innerText = 'PRICE: 450⏣ or $6.41';
+      } else if (articleId === 2) {
+        modalVideoSource.src = 'https://via.placeholder.com/600x300';
+        modalTitle.innerText = 'Title of Article 2';
+        modalDescription.innerText = 'A brief description of article 2...';
+      }
+      
+      // Show modal
+      modal.style.display = 'flex';
+      modalVideo.load();
+    }
+
+    // Close modal
+    function closeModal() {
+      document.getElementById('articleModal').style.display = 'none';
+    }
+
+    // Load animations
+    window.addEventListener('load', () => {
+      document.body.classList.add('page-loaded');
+    });
+  </script>
 </body>
 </html>
