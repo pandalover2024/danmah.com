@@ -24,8 +24,8 @@
       <h2>Latest Articles</h2>
       <div class="article" id="article1" onclick="openArticle(1)">
         <h2>RELEASE OF OUR FIRST PRODUCT</h2>
-        <video width="100%" height="250" controls>
-          <source src="video/releaseFirstProd.mp4" type="video/mp4">
+        <video controls width="800" height="500" muted loop autoplay>
+          <source src="https://github.com/pandalover2024/danmah.com/raw/main/video/releaseFirstProd.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p class="description">
@@ -60,7 +60,7 @@
     <div class="modal-content">
       <button class="close" onclick="closeModal()">×</button>
       <h2 id="modalTitle"></h2>
-      <video id="modalVideo" width="100%" height="400" controls>
+      <video id="modalVideo" controls width="800" height="500" muted loop autoplay>
         <source id="modalVideoSource" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -103,13 +103,13 @@
       
       // Set content based on article ID
       if (articleId === 1) {
-        modalVideoSource.src = 'video/releaseFirstProd.mp4';
+        modalVideoSource.src = 'https://github.com/pandalover2024/danmah.com/raw/main/video/releaseFirstProd.mp4';
         modalTitle.innerText = 'RELEASE OF OUR FIRST PRODUCT';
         modalDescription.innerHTML = `
           <p>Our first product is a simple loading system with a few cutscenes. After a few seconds, a black frame tweens in and after a couple of seconds, it tweens off.</p>
           <p>Then, your camera is automatically connected to the player (everything returns to normal). You can move the parts (the cutscene) wherever you want, and if you need help, you can open a ticket anytime in our main Discord server.</p>
-         <p>You can buy this product by joining our main discord server.</p>
-          `;
+          <p>You can buy this product by joining our main discord server.</p>
+         `;
         modalPrice.innerText = 'PRICE: 450⏣ or $6.41';
       } else if (articleId === 2) {
         modalVideoSource.src = 'https://via.placeholder.com/600x300';
