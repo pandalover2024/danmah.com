@@ -1,3 +1,6 @@
+/* Import Anton font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 /* General reset and full-screen fit */
 * {
   margin: 0;
@@ -14,7 +17,7 @@ body, html {
 }
 
 header {
-  background-color: #e74c3c; /* Dark pink background */
+  background: linear-gradient(to right, #ff9a9e, #e74c3c, #ff9a9e); /* Horizontal gradient in header */
   color: #ffffff; /* White text */
   padding: 30px 0;
   text-align: center;
@@ -22,9 +25,10 @@ header {
 }
 
 header h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
   font-size: 40px;
+  font-style: italic; /* Italic text */
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Darker shadow on text */
 }
@@ -45,6 +49,8 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
+  font-family: 'Anton', sans-serif; /* Apply Anton font */
+  font-style: italic; /* Italic for links */
   transition: color 0.3s ease;
 }
 
@@ -87,7 +93,9 @@ main {
 .article h2 {
   padding: 15px;
   font-size: 24px;
-  font-weight: 600;
+  font-family: 'Anton', sans-serif; /* Apply Anton font */
+  font-style: italic; /* Italic for article titles */
+  font-weight: 400;
   color: #f0f0f0; /* Light text color */
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Dark shadow for titles */
@@ -111,11 +119,14 @@ footer {
   color: #ffffff; /* White text */
   padding: 20px;
   font-size: 14px;
+  font-style: italic; /* Italic for footer */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Darker shadow on footer text */
 }
 
 h1, h2 {
   color: #f0f0f0; /* Light text color */
+  font-family: 'Anton', sans-serif; /* Apply Anton font */
+  font-style: italic; /* Italicize all headings */
 }
 
 #about ul {
@@ -127,6 +138,8 @@ h1, h2 {
   margin: 10px 0;
   font-size: 16px;
   color: #bdc3c7; /* Lighter text for team members */
+  font-family: 'Anton', sans-serif; /* Apply Anton font */
+  font-style: italic; /* Italic for about section */
 }
 
 /* Smooth page load */
@@ -151,6 +164,8 @@ body.page-loaded {
   color: #e74c3c; /* Dark pink for links */
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Anton', sans-serif; /* Apply Anton font */
+  font-style: italic; /* Italicize contact links */
 }
 
 #contact a:hover {
@@ -191,7 +206,9 @@ body.page-loaded {
   font-size: 28px;
   color: #f0f0f0; /* Light text color */
   margin-top: 15px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Anton', sans-serif;
+  font-style: italic;
 }
 
 .modal p {
@@ -216,78 +233,4 @@ body.page-loaded {
 
 .close:hover {
   background-color: #e74c3c; /* Dark pink on hover */
-}
-
-
-
-
-
-/* Ensure sections cover full viewport height */
-.full-screen {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  padding: 50px 20px; /* Space from the top */
-  box-sizing: border-box;
-}
-
-.full-screen h2, .full-screen p, .full-screen ul {
-  font-size: 1.5em; /* Increased text size */
-  line-height: 1.4;
-  margin-bottom: 10px; /* Closer spacing */
-}
-
-.full-screen h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-footer {
-  display: none; /* Removed footer */
-}
-
-body, html {
-  height: 100%;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, #ff9a9e, #e74c3c 50%, #ff9a9e); /* Gradient from pink to dark pink in the middle */
-  color: #f0f0f0; /* Light text color for contrast */
-}
-
-header {
-  background: linear-gradient(to right, #ff9a9e, #e74c3c, #ff9a9e); /* Horizontal gradient in header */
-  color: #ffffff; /* White text */
-  padding: 30px 0;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
 }
