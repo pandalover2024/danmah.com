@@ -6,6 +6,24 @@
   <title>DanMah</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="https://media.discordapp.net/attachments/1294951848519925831/1303606188201742336/LOGO_C7733bd3.png?ex=672c5d5f&is=672b0bdf&hm=6b09c9c2d7d9fe980b2216c6cc2ebb9032f9fc510b09a46434977f3c116338e2&=&format=webp&quality=lossless&width=350&height=350" type="image/x-icon" />
+  <style>
+    /* Add this CSS for responsiveness */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body class="page-loaded">
   <header>
@@ -24,10 +42,10 @@
       <h2>Latest Articles</h2>
       <div class="article" id="article1" onclick="openArticle(1)">
         <h2>RELEASE OF OUR FIRST PRODUCT</h2>
-        <video controls width="800" height="500" muted loop autoplay>
-          <source src="https://github.com/pandalover2024/danmah.com/raw/main/video/releaseFirstProd.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <!-- Video Container for Responsiveness -->
+        <div class="video-container">
+          <iframe width="800" height="500" src="https://www.youtube.com/embed/BzDO7bZOlvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <p class="description">
           Our first product is officially released! Watch the video and click on me for details.
         </p>
@@ -60,10 +78,9 @@
     <div class="modal-content">
       <button class="close" onclick="closeModal()">×</button>
       <h2 id="modalTitle"></h2>
-      <video id="modalVideo" controls width="800" height="500" muted loop autoplay>
-        <source id="modalVideoSource" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="video-container">
+        <iframe id="modalVideo" width="800" height="500" src="https://www.youtube.com/embed/BzDO7bZOlvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <p id="modalDescription"></p>
       <p id="modalPrice" style="font-size: 24px; font-weight: 600; color: #f39c12; margin-top: 20px;"></p>
     </div>
@@ -96,14 +113,12 @@
     function openArticle(articleId) {
       const modal = document.getElementById('articleModal');
       const modalVideo = document.getElementById('modalVideo');
-      const modalVideoSource = document.getElementById('modalVideoSource');
       const modalTitle = document.getElementById('modalTitle');
       const modalDescription = document.getElementById('modalDescription');
       const modalPrice = document.getElementById('modalPrice');
       
       // Set content based on article ID
       if (articleId === 1) {
-        modalVideoSource.src = 'https://github.com/pandalover2024/danmah.com/raw/main/releaseFirstProd.mp4';
         modalTitle.innerText = 'RELEASE OF OUR FIRST PRODUCT';
         modalDescription.innerHTML = `
           <p>Our first product is a simple loading system with a few cutscenes. After a few seconds, a black frame tweens in and after a couple of seconds, it tweens off.</p>
@@ -112,14 +127,12 @@
          `;
         modalPrice.innerText = 'PRICE: 450⏣ or $6.41';
       } else if (articleId === 2) {
-        modalVideoSource.src = 'https://via.placeholder.com/600x300';
         modalTitle.innerText = 'Title of Article 2';
         modalDescription.innerText = 'A brief description of article 2...';
       }
       
       // Show modal
       modal.style.display = 'flex';
-      modalVideo.load();
     }
 
     // Close modal
