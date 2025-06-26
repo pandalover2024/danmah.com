@@ -1,149 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DanMah</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" href="https://cdn.discordapp.com/attachments/1294951848519925831/1303744754898571344/LOGO_C7733bd3.png?ex=672cde6b&is=672b8ceb&hm=ad6877c5f7813f481e554e8d20df7ab0974ca2ad129eb06e177487addcad8cc4&" type="image/x-icon" />
+<html lang="de">
+<head>
+<meta name="google-site-verification" content="5qyc1kjWAqRFNMOH5lMlbzwqGoz3tZPJohamMOK7s5w" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahmoud Bankousli – Schauspieler aus Deutschland</title>
+  <meta name="description" content="Offizielle Website von Mahmoud Bankousli – aufstrebender Schauspieler mit rumänischen Wurzeln. Finde Infos, Fotos und Kontaktmöglichkeiten.">
+
+  <!-- CSS direkt eingebettet -->
   <style>
-    /* Add this CSS for responsiveness */
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #111;
     }
-    
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+
+    header {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .portrait {
       width: 100%;
-      height: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 12px;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      background: #eee;
     }
   </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mahmoud Bankousli",
+    "jobTitle": "Schauspieler",
+    "nationality": "Romanian",
+    "url": "https://yourdomain.com",
+    "sameAs": [
+      "https://www.instagram.com/mah.nrw.kr"
+    ]
+  }
+  </script>
 </head>
-<body class="page-loaded">
+<body>
+
   <header>
-    <h1>DanMah</h1>
-    <nav>
-      <ul>
-        <li><a href="#home" onclick="showHome(event)">Home</a></li>
-        <li><a href="#about" onclick="showAbout(event)">About</a></li>
-        <li><a href="#contact" onclick="showContact(event)">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Mahmoud Bankousli</h1>
+    <h2>Schauspieler aus Deutschland mit rumänischen Wurzeln</h2>
   </header>
 
-  <main id="home">
-    <section id="articles">
-      <h2>Latest Articles</h2>
-      <div class="article" id="article1" onclick="openArticle(1)">
-        <h2>RELEASE OF OUR FIRST PRODUCT</h2>
-        <!-- Video Container for Responsiveness -->
-        <div class="video-container">
-          <iframe width="800" height="500" src="https://www.youtube.com/embed/u0PoeF7ABWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p class="description">
-          Our first product is officially released! Watch the video and click on me for details.
-        </p>
-      </div>
+  <main>
+    <section class="profile">
+      <img src="mahmoud-bankousli.jpg" alt="Mahmoud Bankousli Portrait" class="portrait" />
+      <p>Ich bin Mahmoud Bankousli, ein 17-jähriger Schauspieler mit rumänischem/syrischem Hintergrund, der seine Karriere gerade startet. Ich liebe es, Emotionen auszudrücken, in Rollen zu wachsen und Menschen mit Geschichten zu bewegen. Willkommen auf meiner offiziellen Website!</p>
+    </section>
+
+    <section class="contact">
+      <h3>Kontakt</h3>
+      <p>📩 E-Mail: <a href="mailto:mahmoudbankousli@gmail.com">mahmoudbankousli@gmail.com</a></p>
+      <p>📷 Instagram: <a href="https://www.instagram.com/mah.nrw.kr" target="_blank">@mah.nrw.kr</a></p>
     </section>
   </main>
 
-  <main id="about" style="display: none;">
-    <section id="about" class="full-screen">
-      <h2>About Us</h2>
-      <p>DanMah is a company focused on creating innovative products. We are a team of dedicated professionals passionate about programming and design.</p>
-      <h2>Our Team</h2>
-      <ul>
-        <li>Dani2009Flo - CEO</li>
-        <li>MasterInqsss - Developer</li>
-      </ul>
-    </section>
-  </main>
+  <footer>
+    <p>© 2025 Mahmoud Bankousli</p>
+  </footer>
 
-  <main id="contact" style="display: none;">
-    <section id="contact" class="full-screen">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:contactdanmah@gmail.com">contactdanmah@gmail.com</a></p>
-      <p>Discord: <a href="https://discord.gg/4SHcSKUzA8">Join our Discord</a></p>
-    </section>
-  </main>
-
-  <!-- Modal for article -->
-  <div id="articleModal" class="modal">
-    <div class="modal-content">
-      <button class="close" onclick="closeModal()">×</button>
-      <h2 id="modalTitle"></h2>
-      <div class="video-container">
-        <iframe id="modalVideo" width="800" height="500" src="https://www.youtube.com/embed/u0PoeF7ABWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <p id="modalDescription"></p>
-      <p id="modalPrice" style="font-size: 24px; font-weight: 600; color: #f39c12; margin-top: 20px;"></p>
-    </div>
-  </div>
-
-  <script>
-    // Navigation toggle with event.preventDefault() to avoid scrolling
-    function showHome(event) {
-      event.preventDefault();
-      document.getElementById('home').style.display = 'block';
-      document.getElementById('about').style.display = 'none';
-      document.getElementById('contact').style.display = 'none';
-    }
-
-    function showAbout(event) {
-      event.preventDefault();
-      document.getElementById('home').style.display = 'none';
-      document.getElementById('about').style.display = 'block';
-      document.getElementById('contact').style.display = 'none';
-    }
-
-    function showContact(event) {
-      event.preventDefault();
-      document.getElementById('home').style.display = 'none';
-      document.getElementById('about').style.display = 'none';
-      document.getElementById('contact').style.display = 'block';
-    }
-
-    // Modal functionality
-    function openArticle(articleId) {
-      const modal = document.getElementById('articleModal');
-      const modalVideo = document.getElementById('modalVideo');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalDescription = document.getElementById('modalDescription');
-      const modalPrice = document.getElementById('modalPrice');
-      
-      // Set content based on article ID
-      if (articleId === 1) {
-        modalTitle.innerText = 'RELEASE OF OUR FIRST PRODUCT';
-        modalDescription.innerHTML = `
-          <p>Our first product is a simple loading system with a few cutscenes. After a few seconds, a black frame tweens in and after a couple of seconds, it tweens off.</p>
-          <p>Then, your camera is automatically connected to the player (everything returns to normal). You can move the parts (the cutscene) wherever you want, and if you need help, you can open a ticket anytime in our main Discord server.</p>
-          <p>You can buy this product by joining our main discord server.</p>
-         `;
-        modalPrice.innerText = 'PRICE: 450⏣ or $6.41';
-      } else if (articleId === 2) {
-        modalTitle.innerText = 'Title of Article 2';
-        modalDescription.innerText = 'A brief description of article 2...';
-      }
-      
-      // Show modal
-      modal.style.display = 'flex';
-    }
-
-    // Close modal
-    function closeModal() {
-      document.getElementById('articleModal').style.display = 'none';
-    }
-
-    // Load animations
-    window.addEventListener('load', () => {
-      document.body.classList.add('page-loaded');
-    });
-  </script>
 </body>
 </html>
